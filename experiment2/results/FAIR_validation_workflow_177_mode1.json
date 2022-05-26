@@ -1,0 +1,148 @@
+{
+    "components": [
+        {
+            "name": "code/tpdl2022/experiment3-workflowhub-workflows/workflow_177ro-crate-metadata.json",
+            "identifier": "code/tpdl2022/experiment3-workflowhub-workflows/workflow_177ro-crate-metadata.json",
+            "type": "ro-crate",
+            "tool-used": "ro-crate-FAIR",
+            "checks": [
+                {
+                    "principle_id": "F1",
+                    "category_id": "Findable",
+                    "title": "(Meta)data are assigned a persistent identifier",
+                    "description": "This check verifies if the RO has a persintance identifier ['w3id.org', 'doi.org', 'purl.org', 'www.w3.org']",
+                    "total_passed_tests": 0,
+                    "total_tests_run": 1,
+                    "status": "error",
+                    "explanation": "No identifier in root data entity"
+                },
+                {
+                    "principle_id": "F2",
+                    "category_id": "Findable",
+                    "title": "Data are described with rich metadata",
+                    "description": "This check verifies if the the following minimum metadata ['author', 'license', 'description'] are present in the ro-crate",
+                    "total_passed_tests": 1,
+                    "total_tests_run": 1,
+                    "status": "ok",
+                    "explanation": "The ro-crate contains the following metadata ['author', 'license', 'description']"
+                },
+                {
+                    "principle_id": "F3",
+                    "category_id": "Findable",
+                    "title": "Metadata clearly and explicitly include the identifier of the data they describe",
+                    "description": "This check verifies that the hasPart elements exists and are describe in the ro",
+                    "total_passed_tests": 1,
+                    "total_tests_run": 1,
+                    "status": "ok",
+                    "explanation": "All element identifiers exists"
+                },
+                {
+                    "principle_id": "R1.1",
+                    "category_id": "Reusable",
+                    "title": "(Meta)data are released with a clear and accessible data usage license",
+                    "description": "This check verifies whether the RO has a licence. It also checks that there is a licence in RO parts",
+                    "total_passed_tests": 0,
+                    "total_tests_run": 1,
+                    "status": "error",
+                    "explanation": "These entities have no licence: ['ro-crate-metadata.json']"
+                },
+                {
+                    "principle_id": "R1.2",
+                    "category_id": "Reusable",
+                    "title": "(Meta)data are associated with detailed provenance",
+                    "description": "This check verifies that all elements of the RO have the following fields: ['author', 'datePublished', 'citation']",
+                    "total_passed_tests": 0,
+                    "total_tests_run": 1,
+                    "explanation": [
+                        "Galaxy-Workflow-RNA-RNA_interactome_analysis_using_BWA-MEM.ga do not have author, datePublished, citation",
+                        "ro-crate-metadata.json do not have author, datePublished, citation"
+                    ],
+                    "status": "error"
+                }
+            ],
+            "score": {
+                "Findable": {
+                    "tests_passed": 2,
+                    "total_tests": 3
+                },
+                "Accessible": {
+                    "tests_passed": 0,
+                    "total_tests": 0
+                },
+                "Interoperable": {
+                    "tests_passed": 0,
+                    "total_tests": 0
+                },
+                "Reusable": {
+                    "tests_passed": 0,
+                    "total_tests": 2
+                }
+            }
+        },
+        {
+            "name": "RNA-RNA interactome analysis using BWA-MEM",
+            "identifier": null,
+            "type": [
+                "File",
+                "SoftwareSourceCode",
+                "ComputationalWorkflow"
+            ],
+            "tool-used": "ro-crate-FAIR",
+            "information": "These checks have only been done by checking their metadata in the RO",
+            "checks": [
+                {
+                    "principle_id": "F2",
+                    "category_id": "Findable",
+                    "title": "Data are described with rich metadata",
+                    "description": "This check verifies if the the following minimum metadata ['author', 'license', 'description'] are present in the reserch object",
+                    "total_passed_tests": 0,
+                    "total_tests_run": 1,
+                    "status": "error",
+                    "explanation": "Missing the following metadata: author"
+                },
+                {
+                    "principle_id": "R1.1",
+                    "category_id": "Reusable",
+                    "title": "(Meta)data are released with a clear and accessible data usage license",
+                    "description": "This check verifies whether the element in the reserch object has a licence",
+                    "total_passed_tests": 1,
+                    "total_tests_run": 1,
+                    "status": "ok",
+                    "explanation": "This element has a license"
+                },
+                {
+                    "principle_id": "R1.2",
+                    "category_id": "Reusable",
+                    "title": "(Meta)data are associated with detailed provenance",
+                    "description": "This check verifies that the element in the reserch object has the following fields: ['author', 'datePublished', 'citation']",
+                    "total_passed_tests": 0,
+                    "total_tests_run": 1,
+                    "explanation": "This element has no :author, datePublished, citation",
+                    "status": "error"
+                }
+            ],
+            "score": {
+                "Findable": {
+                    "tests_passed": 0,
+                    "total_tests": 1
+                },
+                "Accessible": {
+                    "tests_passed": 0,
+                    "total_tests": 0
+                },
+                "Interoperable": {
+                    "tests_passed": 0,
+                    "total_tests": 0
+                },
+                "Reusable": {
+                    "tests_passed": 1,
+                    "total_tests": 2
+                }
+            }
+        }
+    ],
+    "overall_score": {
+        "description": "The score is calculated by averaging the scores of its components. The component score is the average of the score of each FAIR principle",
+        "score": 29.17
+    }
+}
